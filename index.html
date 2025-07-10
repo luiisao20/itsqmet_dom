@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>DOM</title>
+  </head>
+  <body class="bg-black">
+    <main class="w-3/4 mx-auto text-white">
+      <div class="flex items-center gap-20 justify-center my-4">
+        <img
+          src="/img/dom-logo.png"
+          alt="Logo DOM"
+          class="w-[10rem] h-[10rem] rounded-full"
+        />
+        <div>
+          <h1 class="text-4xl font-bold">DOM</h1>
+          <p class="text-xl italic font-semibold text-gray-900 dark:text-white">
+            Document Object Model, introducción al DOM.
+          </p>
+        </div>
+      </div>
+      <hr
+        class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm dark:bg-gray-700"
+      />
+      <div class="mx-8">
+        <div class="flex gap-10 items-center">
+          <figure>
+            <img
+              src="/img/dom-structure.png"
+              alt="Estructura del DOM"
+              class="rounded-xl"
+            />
+            <figcaption class="text-center text-sm mt-2 italic">
+              Estructura del DOM
+            </figcaption>
+          </figure>
+          <p
+            class="mb-3 first-letter:text-8xl text-justify first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start"
+          >
+            El modelo de objetos del documento
+            <span class="font-bold">DOM</span> por sus siglas en inglés es una
+            interfaz de programación del lenguaje de tipado
+            <span class="font-bold">HTML.</span> Este define la
+            <span class="font-bold">estructura lógica</span> de los documentos y
+            la forma que se accede a ellos, pero no especifica relación alguna
+            entre ellos. Proporciona propiedades y métodos para acceder a los
+            objetos que lo componen y modificarlos a nuestro antojo.
+          </p>
+        </div>
+        <hr
+          class="w-48 h-1 mx-auto my-2 bg-gray-100 border-0 rounded-sm dark:bg-gray-700"
+        />
+      </div>
+      <section class="flex items-center my-4">
+        <div class="px-4 mx-auto lg:px-12">
+          <!-- Start coding here -->
+          <div
+            class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg"
+          >
+            <div
+              class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4"
+            >
+              <div>
+                <h5 class="mr-3 font-semibold dark:text-white">
+                  Métodos y valores del DOM
+                </h5>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Los métodos son <span class="font-bold">acciones</span> que
+                  puedes realizar en elementos HTML. Las propiedades son
+                  <span class="font-bold">valores</span> que se pueden
+                  configurar o cambiar
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="relative overflow-x-auto">
+        <table
+          class="w-3/4 mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr>
+              <th scope="col" class="px-6 py-3">Método</th>
+              <th scope="col" class="px-6 py-3">Sintaxis</th>
+              <th scope="col" class="px-6 py-3">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200"
+            >
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Buscar elemento por ID
+              </th>
+              <td class="px-6 py-4">
+                <code>document.getElementById("id")</code>
+              </td>
+              <td class="px-6 py-4">
+                Devuelve un elemento del DOM que tenga el id seleccionado
+              </td>
+            </tr>
+            <tr
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200"
+            >
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Buscar elemento por etiqueta
+              </th>
+              <td class="px-6 py-4">
+                <code>document.getElementByTagName("p")</code>
+              </td>
+              <td class="px-6 py-4">
+                Devuelve un array de elementos que contengan la etiqueta
+                seleccionada
+              </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Buscar elementos por el nombre de clases
+              </th>
+              <td class="px-6 py-4">
+                <code>document.getElementByClassName("intro")</code>
+              </td>
+              <td class="px-6 py-4">
+                Regresa un listado de elementos que contengan el nombre de la
+                clase
+              </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Buscar elementos por selectores
+              </th>
+              <td class="px-6 py-4">
+                <code>document.querySelectorAll("p.intro")</code>
+              </td>
+              <td class="px-6 py-4">
+                Regresa un listado de elementos que encajan con la descripción
+                de búsqueda
+              </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Obtener elementos hijos
+              </th>
+              <td class="px-6 py-4">
+                <code>.children</code>
+              </td>
+              <td class="px-6 py-4">
+                Devuelve una lista de elementos HTML hijo
+              </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Buscar el elemento padre
+              </th>
+              <td class="px-6 py-4">
+                <code>.parentElement</code>
+              </td>
+              <td class="px-6 py-4">Devuelve el padre de un elemento HTML</td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Obtener el texto
+              </th>
+              <td class="px-6 py-4">
+                <code>.textContent</code>
+              </td>
+              <td class="px-6 py-4">
+                Devuelve el texto de un elemento y también lo puede cambiar
+              </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Obtener el texto renderizado
+              </th>
+              <td class="px-6 py-4">
+                <code>.innerText</code>
+              </td>
+              <td class="px-6 py-4">
+                Devuelve el texto de un elemento y también lo puede cambiar
+                (afectando los estilos CSS)
+              </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+              >
+                Obtener el contenido HTML
+              </th>
+              <td class="px-6 py-4">
+                <code>.innerHTML</code>
+              </td>
+              <td class="px-6 py-4">
+                Devuelve el contenido HTML de un elemento y también lo puede
+                cambiar
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr
+        class="w-48 h-1 mx-auto my-6 bg-gray-100 border-0 rounded-sm dark:bg-gray-700"
+      />
+      <h1 class="text-center font-bold text-4xl mb-4">Tipos de DOM</h1>
+      <div class="w-1/2 mx-auto mb-10">
+        <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+          <ul
+            class="flex flex-wrap -mb-px text-sm font-medium text-center"
+            id="default-tab"
+            data-tabs-toggle="#default-tab-content"
+            role="tablist"
+          >
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg cursor-pointer"
+                id="dom-real-tab"
+                data-tabs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                DOM real
+              </button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block cursor-pointer p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="virtual-dom-tab"
+                data-tabs-target="#dashboard"
+                type="button"
+                role="tab"
+                aria-controls="dashboard"
+                aria-selected="false"
+              >
+                DOM virtual
+              </button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block cursor-pointer p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="shaodw-dom-tab"
+                data-tabs-target="#settings"
+                type="button"
+                role="tab"
+                aria-controls="settings"
+                aria-selected="false"
+              >
+                Shadow DOM
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block cursor-pointer p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="light-dom-tab"
+                data-tabs-target="#contacts"
+                type="button"
+                role="tab"
+                aria-controls="contacts"
+                aria-selected="false"
+              >
+                Light DOM
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="default-tab-content">
+          <div
+            class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="dom-real-tab"
+          >
+            <p class="text-sm text-gray-400">
+              El
+              <strong class="font-medium text-gray-800 dark:text-white">
+                DOM Real
+              </strong>
+              es la forma en la que está estructurada la página HTML que se
+              puede visualizar en cualquier navegador, seleccionando
+              <strong class="font-medium text-gray-800 dark:text-white">
+                Inspeccionar
+              </strong>
+              y abriendo la pestaña de elementos
+            </p>
+            <p class="text-sm text-gray-400 mt-4">
+              JavaScript nos proporciona varias funciones (descritas
+              anteriormente) para acceder a estos elementos, modificarlos o
+              eliminarlos
+            </p>
+          </div>
+          <div
+            class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+            id="dashboard"
+            role="tabpanel"
+            aria-labelledby="dashboard-tab"
+          >
+            <p class="text-sm text-gray-400">
+              El
+              <strong class="font-medium text-gray-800 dark:text-white">
+                DOM virtual
+              </strong>
+              es una representación ligera y artificial del DOM real. Desde la
+              aparición de diferentes
+              <strong class="font-medium text-gray-800 dark:text-white">
+                Frameworks
+              </strong>
+              del ecosistema de JavaScript, el concepto de DOM virtual tomó
+              forma, esta no es más que una copia original del DOM donde se
+              gestionan los cambios y actualizaciones para posteriormente
+              introducrilos al DOM real.
+            </p>
+            <p class="text-sm text-gray-400 mt-4">
+              El trabajo en este DOM acelera los cambios y sólo afecta al nodo
+              seleccionado, sin afectar a todo el documento, lo que ayuda a una
+              mejor gestión del mismo, aunque posee ligeras desventajas como
+              <strong class="font-medium text-gray-800 dark:text-white">
+                peor rendimiento, más coste de memoria y mayor complejidad
+              </strong>
+            </p>
+          </div>
+          <div
+            class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+            id="settings"
+            role="tabpanel"
+            aria-labelledby="shaodw-dom-tab"
+          >
+            <p class="text-sm text-gray-400">
+              El Shadow DOM o
+              <strong class="font-medium text-gray-800 dark:text-white">
+                sombra del DOM
+              </strong>
+              es un concepto moderno para crear elementos HTML en el DOM
+              teniendo su propio DOM en particular, por lo tanto siendo
+              <strong class="font-medium text-gray-800 dark:text-white">
+                independientes
+              </strong>
+              del resto del documento facilitando su encapsulación.
+            </p>
+            <p class="text-sm text-gray-400 mt-4">
+              Si a un DOM normal se le agrega un Shadow DOM a un elemento HTML
+              pasaríamos a tener un DOM con su propio código HTML, lo que
+              ayudaría a hacer cambios sólo en ese elemento sin afectar al resto
+              del documento.
+            </p>
+            <p class="text-sm text-gray-400 mt-4">
+              Este concepto retoma gran relevancia cuando se empieza a trabajar
+              con componentes reutilizables de forma nativa, lo que facilita al
+              programador la
+              <strong class="font-medium text-gray-800 dark:text-white">
+                organización de su propio código.
+              </strong>
+            </p>
+          </div>
+          <div
+            class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+            id="contacts"
+            role="tabpanel"
+            aria-labelledby="light-dom-tab"
+          >
+            <p class="text-sm text-gray-400">
+              El concepto de
+              <strong class="font-medium text-gray-800 dark:text-white">
+                Light DOM
+              </strong>
+              tiene sentido con un elemento que posea
+              <strong class="font-medium text-gray-800 dark:text-white">
+                Shadow DOM.
+              </strong>
+              Cuando creamos un Shadow DOM para un elemento, este oculta el
+              contenido que ya tenía el elemento. El contenido oculto es el
+              denominado informalmente como Light DOM.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
